@@ -161,6 +161,8 @@ void move_group::MoveGroupMoveAction::executeMoveCallback_PlanOnly(const moveit_
   }
 
   convertToMsg(res.trajectory_, action_res.trajectory_start, action_res.planned_trajectory);
+  ROS_INFO_STREAM("Planning result received with cost : " << res.trajectory_cost_);
+  action_res.trajectory_cost = res.trajectory_cost_;
   action_res.error_code = res.error_code_;
   action_res.planning_time = res.planning_time_;
 }

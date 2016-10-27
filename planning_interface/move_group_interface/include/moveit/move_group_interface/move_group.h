@@ -108,6 +108,9 @@ public:
 
     /// The amount of time it took to generate the plan
     double planning_time_;
+
+    /// The cost of planned trajectory
+    double trajectory_cost_;
   };
 
   /**
